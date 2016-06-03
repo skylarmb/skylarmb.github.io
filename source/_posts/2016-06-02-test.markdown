@@ -1,0 +1,37 @@
+---
+layout: post
+title: "a simple menu effect"
+date: 2016-06-02 21:50:03 -0700
+comments: true
+categories: 
+---
+
+<br>
+##### The HTML
+~~~html
+ <div class="menu-item">books</div>
+ <div class="menu-item">movies</div>
+ <div class="menu-item">games</div>
+ <div class="menu-item">toys</div>
+ <div class="menu-item">candy</div>
+ <div class="menu-item">tools</div>
+~~~
+
+##### The SCSS
+
+~~~scss
+.menu-item {
+	padding: 10px;
+	text-align: center;
+	transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+	max-width: 200px;
+	&:hover {
+		max-width: 300px;
+		background: rgba(0,0,0,0.05)
+	}
+}
+~~~
+
+#### The Result
+
+{% include experiments/test.html %}
