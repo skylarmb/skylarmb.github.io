@@ -1,0 +1,1 @@
+.simple-menu-effect .menu-item{padding:10px;text-align:center;transition:all 500ms cubic-bezier(0.19, 1, 0.22, 1);max-width:200px}.simple-menu-effect .menu-item:hover{max-width:300px;background:rgba(0,0,0,0.05)}

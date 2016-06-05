@@ -6,6 +6,8 @@ comments: true
 categories: 
 ---
 
+I accidentally made this basic effect while messing with styling a dropdown menu on I-dont-even-remember-what... It's about time I put it in 'writing' somewhere
+
 <br>
 ##### The HTML
 ~~~html
@@ -34,4 +36,4 @@ categories:
 
 #### The Result
 
-{% include experiments/test.html %}
+{% include experiments/simple-menu-effect.html %}

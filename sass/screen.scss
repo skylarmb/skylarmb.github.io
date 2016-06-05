@@ -6,3 +6,16 @@
   background-image: url(/images/cover.jpg);
 }
 
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+
+// Then call it with the rules/styles you want wherever you want (As long as the file/include has access to the above function of course).
+#{headings(1,6)} {
+  margin-bottom: 0;
+  margin-top: 1em;
+}
