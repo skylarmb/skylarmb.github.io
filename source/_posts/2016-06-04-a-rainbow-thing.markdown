@@ -33,7 +33,7 @@ If I had been able to use something like that, my code below could have been a l
 
 ###### Problem 2: The 100% keyframe
 
-Animations always start at the 0% and end at 100%. That makes sense. However it would be pretty cool if you could [bodge](https://www.youtube.com/watch?v=lIFE7h3m40U) that a little and _if_ keyframes over 100% were defined, it would play through them at the apropriate time scale (as in an animation with 0-120% keyframes defined would take 120% of its animation time to complete). This would have come in handy at the end of the animation loop where it would be great to start the next loop of the animation before the last one was done. Overlap if you will. Of course this was only a limitation because of the above mentioned limitation with iteration delays... That would be the real way to solve this.
+Animations always start at 0% and end at 100%. That makes sense. However it would be pretty cool if you could [bodge](https://www.youtube.com/watch?v=lIFE7h3m40U) that a little and _if_ keyframes over 100% were defined, it would play through them at the apropriate time scale (as in an animation with 0-120% keyframes defined would take 120% of its animation time to complete). This would have come in handy at the end of the animation loop where it would be great to start the next loop of the animation before the last one was done. Overlap if you will. Of course this was only a limitation because of the above mentioned limitation with iteration delays... That would be the real way to solve this.
 
 Anyways, it's nowhere near perfect as you can see. It doesn't loop properly for the reasons above, and I could have done better with the positioning so that when it loops there isn't a clear jump as it resets.
 
