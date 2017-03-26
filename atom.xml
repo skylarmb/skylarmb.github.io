@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[A Front End Blog]]></title>
+  <link href="http:///atom.xml" rel="self"/>
+  <link href="http:///"/>
+  <updated>2017-03-26T16:53:03-07:00</updated>
+  <id>http:///</id>
+  <author>
+    <name><![CDATA[Skylar Brown]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cubic Bezier Curves]]></title>
+    <link href="http:///blog/2016/08/07/cubic-beziers/"/>
+    <updated>2016-08-07T11:13:16-07:00</updated>
+    <id>http:///blog/2016/08/07/cubic-beziers</id>
+    <content type="html"><![CDATA[<h4>Preface</h4>
+
+<p>Everything I make is made to work in the latest chrome. Because this is a dev blog I don&rsquo;t bother with vendor prefixes / browser compatibility.</p>
+
+<h4>Curves</h4>
+
+<p>A cubic bezier curve in CSS looks like a bunch of random numbers.</p>
+
+<pre><code class="css">.class {    
+ transition: all 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+</code></pre>
+
+<p>What do those values mean? First lets understand the structure and a cubic bezier curve.</p>
+
+<p><img src="http://callmenick.com/files/2016-04/bezier.png" alt="" /></p>
+
+<p>A curve is defined by four points<!--more-->. In the above diagram, P<sub>0</sub> through P<sub>3</sub>. However, P<sub>0</sub> and P<sub>3</sub> always have the coordinates <code>(0,0)</code> and <code>(1,1)</code> respectively, so we only need to define the coordinates of P<sub>1</sub> and P<sub>2</sub>. The four values define the X and Y coordinates of those two points, like so:</p>
+
+<pre><code class="css">.class {
+  transition: all 1s cubic-bezier(P1x, P1y, P2x, P2y);
+}
+</code></pre>
+
+<p>You can play around with a bezier curve generator tool like <a href="http://cubic-bezier.com/">cubic-bezier.com</a> if you are curious how the coordinates of these points effect the curve. Disclaimer: I have never made a cubic bezier &lsquo;by hand&rsquo; because there are so many awesome resources like <a href="http://easings.net">easings.net</a> from which you can copy paste.</p>
+
+<h4>The Fun Part (making pretty things)</h4>
+
+<h6>Two opposite curves</h6>
+
+<p>The two curves I am going to use below are these, taken from <a href="http://easings.net">easings.net</a></p>
+
+<p><img src="http://i.imgur.com/CLiT6g7.png" alt="" /></p>
+
+<p><code>easeInExpo</code> is called <code>$delayed</code> in the code as it starts out basically doing nothing and then quickly goes to 100%. <code>easeOutExpo</code> is called <code>$immediate</code> as it goes to 100% very quickly and then levels off. Note: I hate naming variables.</p>
+
+<h6>Transitioning multiple properties</h6>
+
+<p>There are a surprising number of stack overflow questions where people don&rsquo;t know you can define different transitions for different properties, like so:</p>
+
+<pre><code class="css">.class {
+  transition: font-size 1s $immediate, transform 1s $delayed;
+}
+</code></pre>
+
+<p>Going further, what if you want to transition <code>font-size</code> with <code>$immediate</code>, <code>transform</code> with <code>$delayed</code>, <em>and</em> <code>opacity</code> with <code>$immediate</code>? That line starts to get long really fast. A neat trick is to transition <code>all</code> with the most common easing and then any ones following <code>all</code> are effectively overridden.</p>
+
+<pre><code class="css">.class {
+  transition: all 1s $immediate, transform 1s $delayed;
+}
+</code></pre>
+
+<h6>Putting it all together</h6>
+
+<p>Consider the case of creating a sort of two-stage effect on a div. First make it wider, then make it taller. A lot of time people use Javascript to first apply a class to transition the width, and then half a second later another class to transition the height. But why use JS for something so simple? The pure CSS solution is to transition two &lsquo;opposite&rsquo; bezier curve easings on two separate properties (<code>width</code> and <code>height</code>) like the example above, and you can get a great two-stage effect.</p>
+
+<h6>The Result</h6>
+
+<p data-height="500" data-theme-id="0" data-slug-hash="qNJZZO" data-default-tab="css,result" data-user="skylarmb" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/skylarmb/pen/qNJZZO/">cubic bezier animation</a> by Skylar Brown (<a href="http://codepen.io/skylarmb">@skylarmb</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[forEach for NodeLists]]></title>
+    <link href="http:///blog/2016/07/13/foreach-for-nodelists/"/>
+    <updated>2016-07-13T22:14:02-07:00</updated>
+    <id>http:///blog/2016/07/13/foreach-for-nodelists</id>
+    <content type="html"><![CDATA[<h5>The Problem</h5>
+
+<p>So jQuery is great&hellip; Want to loop over all <code>my-class</code> elements?</p>
+
+<pre><code class="js">$('.my-class').each(function(){
+    // do stuff with $(this)
+});
+</code></pre>
+
+<p>Now as great as it is, you might not want to use jQuery on your site. There are <a href="http://blog.garstasio.com/you-dont-need-jquery/">many</a> <a href="http://youmightnotneedjquery.com/">reasons</a> <a href="http://stackoverflow.com/questions/5099949/what-are-some-empirical-technical-reasons-not-to-use-jquery">why</a>.
+No problem, lets just use vanilla javascript.</p>
+
+<pre><code class="js">document.getElementsByClassName('my-class').forEach(function(){
+  // do stuff ... ?
+});
+</code></pre>
+
+<p>But whats this?</p>
+
+<p><code>Uncaught TypeError: document.getElementsByClassName(...).forEach is not a function(…)</code></p>
+
+<p><!--more-->This is because <code>getElementsByClassName</code>, <code>querySelectorAll</code> etc do not return an array. They return a <code>NodeList</code> which doesn&rsquo;t have a <code>forEach</code> function like an array does.</p>
+
+<h5>Workarounds</h5>
+
+<h6>Option 1: Array prototype</h6>
+
+<p>So, if you google this problem you will find a lot of people suggesting you use the Array prototype <code>forEach</code>.</p>
+
+<pre><code class="js">var myNodeList = document.getElementsByClassName('my-class');
+Array.prototype.forEach.call(myNodeList, elem =&gt; {
+  // do stuff with item
+});
+// or, more simply
+[].forEach.call(myNodeList, elem =&gt; {
+  // do stuff with item
+});
+</code></pre>
+
+<p>This is ugly, and also confusing in my opinion, especially if you use the second option&hellip; What if you do</p>
+
+<pre><code class="js">[1,2,3].forEach.call(myNodeList, elem =&gt; {
+  // what are we looping over here? [1,2,3] or myNodeList?
+});
+</code></pre>
+
+<h6>Option 2: A for loop</h6>
+
+<p>A good ol' for loop</p>
+
+<pre><code class="js">var myNodeList = document.getElementsByClassName('my-class');
+for (var i = 0; i &lt; myNodeList.length; i++) {
+  // do stuff with myNodeList[i]
+}
+</code></pre>
+
+<p>Well&hellip; this works, but feels primitive in the age of high level languages&hellip;</p>
+
+<h6>Option 3: Hack those prototypes!</h6>
+
+<p>So, this may seem crazy and it is. But <a href="">Bling.js</a> gave me this idea, and it totally works&hellip;</p>
+
+<pre><code class="js">NodeList.prototype.__proto__ = Array.prototype // does not work in IE9
+document.getElementsByClassName('my-class').forEach(elem =&gt; {
+  // woah! magic!
+})
+</code></pre>
+
+<h5>The Solution</h5>
+
+<p>I personally use the the third approach, although YMMV depending on which browsers you need to support.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[a rainbow thing]]></title>
+    <link href="http:///blog/2016/06/04/a-rainbow-thing/"/>
+    <updated>2016-06-04T21:23:13-07:00</updated>
+    <id>http:///blog/2016/06/04/a-rainbow-thing</id>
+    <content type="html"><![CDATA[<p>I came across this gif on reddit today.
+<br>
+<br>
+<img src="https://s-media-cache-ak0.pinimg.com/originals/50/b4/97/50b497753dc91b55c5410f531935d7c3.gif">
+<br>
+<br></p>
+
+<p>No idea how it was made but thought it would be an interesting challenge to replicate it with css keyframe animation. I explicitly set out to do this with no javascript just to explore the limitations of keyframe animation, and yes, I am well aware that the problems listed below can all be solved with JS. Thats not the point.</p>
+
+<p>Here are some interesting limitations of keyframe animation that I came across while doing this.</p>
+
+<h6>Problem 1: Iteration Delays</h6>
+
+<p>As helpful as the <code>animation-delay</code> property can be, it only delays the start of the animation relative to page load (or to when the animation was applied to the element). There is no delay-per-iteration type property. I would love to be able to specify an animation something like this&hellip;</p>
+
+<!--more-->
+
+
+<pre><code class="css">.animate {
+    animation: spin 1s ease-in-out infinite;
+    animation-iteration-delay: 0.2s;
+}
+</code></pre>
+
+<p>meaning the animation would loop infinitely, still taking 1 second to complete, but delaying for 0.2s before starting its 1s loop again. While searching around for workarounds I found <a href="http://lists.w3.org/Archives/Public/www-style/2011May/0549.html">this</a> discussion of this exact topic.</p>
+
+<p>If I had been able to use something like that, my code below could have been a lot simpler. The way I did it was generating keyframe sets for each segment (<code>spin-0</code>, <code>spin-1</code>, etc&hellip;) that were all just different divisions of the total animation loop time (like hours on a clock). Segment 0 &ldquo;plays&rdquo; from noon to 1, and explicitly does nothing from 1 til midnight. Segment 1 &ldquo;plays&rdquo; from 1 to 2&hellip; etc. Instead of this wonkyness, you could just have a single <code>spin</code> animation (as simple as a <code>from {...} to {...}</code>) that lasts for the actual amount of time the <code>spin</code> animation runs (1h in the clock analogy) with none of this mathy percentage stuff. Each segment would just get an <code>animation-delay</code> according to it&rsquo;s position in the circle and an <code>animation-iteration-delay</code> equal to the total animation loop time.</p>
+
+<h6>Problem 2: The 100% keyframe</h6>
+
+<p>Animations always start at 0% and end at 100%. That makes sense. However it would be pretty cool if you could <a href="https://www.youtube.com/watch?v=lIFE7h3m40U">bodge</a> that a little and <em>if</em> keyframes over 100% were defined, it would play through them at the apropriate time scale (as in an animation with 0-120% keyframes defined would take 120% of its animation time to complete). This would have come in handy at the end of the animation loop where it would be great to start the next loop of the animation before the last one was done. Overlap if you will. Of course this was only a limitation because of the above mentioned limitation with iteration delays&hellip; That would be the real way to solve this.</p>
+
+<p>Anyways, it&rsquo;s nowhere near perfect as you can see. It doesn&rsquo;t loop properly for the reasons above, and I could have done better with the positioning so that when it loops there isn&rsquo;t a clear jump as it resets.</p>
+
+<h6>The actual code</h6>
+
+<p>I highly recommend opening it on codepen to see it in a less cramped view.
+<br>
+<br></p>
+
+<p data-height="425" data-theme-id="0" data-slug-hash="ZOGMzZ" data-default-tab="css,result" data-user="skylarmb" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/skylarmb/pen/ZOGMzZ/">ZOGMzZ</a> by Skylar Brown (<a href="http://codepen.io/skylarmb">@skylarmb</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+]]></content>
+  </entry>
+  
+</feed>
