@@ -9,7 +9,7 @@ categories:
 I came across this gif on reddit today. 
 <br>
 <br>
-<img src="http://67.media.tumblr.com/a123606e52db443841a6bb982d93febe/tumblr_n7a40sXB7P1r2geqjo1_r1_500.gif">
+<img src="https://s-media-cache-ak0.pinimg.com/originals/50/b4/97/50b497753dc91b55c5410f531935d7c3.gif">
 <br>
 <br>
 
@@ -19,6 +19,7 @@ Here are some interesting limitations of keyframe animation that I came across w
 
 ###### Problem 1: Iteration Delays
 As helpful as the `animation-delay` property can be, it only delays the start of the animation relative to page load (or to when the animation was applied to the element). There is no delay-per-iteration type property. I would love to be able to specify an animation something like this...
+<!--more-->
 
 ~~~css
 .animate {
