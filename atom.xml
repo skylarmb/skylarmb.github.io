@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[A Front End Blog]]></title>
-  <link href="http://skylarmb.github.io/atom.xml" rel="self"/>
-  <link href="http://skylarmb.github.io/"/>
-  <updated>2017-03-26T17:22:23-07:00</updated>
-  <id>http://skylarmb.github.io/</id>
+  <link href="http://skylar.xyz/atom.xml" rel="self"/>
+  <link href="http://skylar.xyz/"/>
+  <updated>2017-03-26T17:24:50-07:00</updated>
+  <id>http://skylar.xyz/</id>
   <author>
     <name><![CDATA[Skylar Brown]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Cubic Bezier Curves]]></title>
-    <link href="http://skylarmb.github.io/blog/2016/08/07/cubic-beziers/"/>
+    <link href="http://skylar.xyz/blog/2016/08/07/cubic-beziers/"/>
     <updated>2016-08-07T11:13:16-07:00</updated>
-    <id>http://skylarmb.github.io/blog/2016/08/07/cubic-beziers</id>
+    <id>http://skylar.xyz/blog/2016/08/07/cubic-beziers</id>
     <content type="html"><![CDATA[<h4>Preface</h4>
 
 <p>Everything I make is made to work in the latest chrome. Because this is a dev blog I don&rsquo;t bother with vendor prefixes / browser compatibility.</p>
@@ -88,9 +88,9 @@
   
   <entry>
     <title type="html"><![CDATA[forEach for NodeLists]]></title>
-    <link href="http://skylarmb.github.io/blog/2016/07/13/foreach-for-nodelists/"/>
+    <link href="http://skylar.xyz/blog/2016/07/13/foreach-for-nodelists/"/>
     <updated>2016-07-13T22:14:02-07:00</updated>
-    <id>http://skylarmb.github.io/blog/2016/07/13/foreach-for-nodelists</id>
+    <id>http://skylar.xyz/blog/2016/07/13/foreach-for-nodelists</id>
     <content type="html"><![CDATA[<h5>The Problem</h5>
 
 <p>So jQuery is great&hellip; Want to loop over all <code>my-class</code> elements?</p>
@@ -167,9 +167,9 @@ document.getElementsByClassName('my-class').forEach(elem =&gt; {
   
   <entry>
     <title type="html"><![CDATA[a rainbow thing]]></title>
-    <link href="http://skylarmb.github.io/blog/2016/06/04/a-rainbow-thing/"/>
+    <link href="http://skylar.xyz/blog/2016/06/04/a-rainbow-thing/"/>
     <updated>2016-06-04T21:23:13-07:00</updated>
-    <id>http://skylarmb.github.io/blog/2016/06/04/a-rainbow-thing</id>
+    <id>http://skylar.xyz/blog/2016/06/04/a-rainbow-thing</id>
     <content type="html"><![CDATA[<p>I came across this gif on reddit today.
 <br>
 <br>
