@@ -5,11 +5,11 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta charset="utf-8">
-	<title>A Front End Blog</title>
+	<title>Animated markers on an SVG map | A Front End Blog</title>
 
 	<meta name="author" content="Skylar Brown">
 	
-	<meta name="description" content="28 May 2017 Animated Markers on an SVG Map I recently started my new job at Headnote. My first project was to redo all of the public facing pages to &hellip;">
+	<meta name="description" content="A Front End Blog 28 May 2017 Animated Markers on an SVG Map I recently started my new job at Headnote. My first project was to redo all of the &hellip;">
 
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="MobileOptimized" content="320" />
@@ -25,38 +25,17 @@
 </head>
 
 
-<body class="home-template">
-  <header id="site-head">
-  <div class="vertical">
-    <div id="site-head-content" class="inner">
-      <h1 class="blog-title"><a class="no-rollover" href="/">A Front End Blog</a></h1>
-      <h2 class="blog-description">By Skylar Brown</h2>
-    </div>
-  </div>
-</header>
-  <main class="content" role="main">
-    
-
-
-
-  
-    <article class="post">
-      
-  
-    
+<body class="post-template">
+  <main class="content" role="main"><article class="post">
   
   <header class="post-header">
-    <span class="post-meta">28 May 2017</span>
-    <h2 class="post-title">
-      
-      <a href="/blog/2017/05/28/map-markers/">
-      
-        Animated Markers on an SVG Map</a>
-    </h2>
+    <a id="blog-logo" href="/">A Front End Blog</a>
   </header>
-  <section class="post-excerpt">
-    
-        <p>I recently started my new job at <a href="https://headnote.com">Headnote</a>. My first project was to redo all of the public facing pages to update the branding and advertising language. The one piece of code I would like to share from the experience is the animated markers that pop up in various places on a map. Now, I am new to Less (purely a Sass guy before this gig), so this was a great learning experience for me about what advanced features Less supports compared to Sass. There were definitely some challenges. The main one being that Less is much less flexible (no pun intended) in terms of interpolation and apparently is very very picky about using variables / interpolation on the <em>left</em> side of a definition (I dont know what else to call it)&hellip; For example:</p>
+  <span class="post-meta">28 May 2017</span>
+  <h1 class="post-title">Animated Markers on an SVG Map</h1>
+
+  <section class="post-content">
+    <p>I recently started my new job at <a href="https://headnote.com">Headnote</a>. My first project was to redo all of the public facing pages to update the branding and advertising language. The one piece of code I would like to share from the experience is the animated markers that pop up in various places on a map. Now, I am new to Less (purely a Sass guy before this gig), so this was a great learning experience for me about what advanced features Less supports compared to Sass. There were definitely some challenges. The main one being that Less is much less flexible (no pun intended) in terms of interpolation and apparently is very very picky about using variables / interpolation on the <em>left</em> side of a definition (I dont know what else to call it)&hellip; For example:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -155,152 +134,35 @@
 
 
 
-    
-    ...<br/><a href="/blog/2017/05/28/map-markers/"><h6>Read more...</h6></a>
-    <!-- content | excerpt }} -->
   </section>
 
 
-    </article>
-
-  
-    <article class="post">
-      
-  
-  <header class="post-header">
-    <span class="post-meta">07 Aug 2016</span>
-    <h2 class="post-title">
-      
-      <a href="/blog/2016/08/07/cubic-beziers/">
-      
-        Cubic Bezier Curves</a>
-    </h2>
-  </header>
-  <section class="post-excerpt">
-    
-        <h4>Preface</h4>
-
-<p>Everything I make is made to work in the latest chrome. Because this is a dev blog I don&rsquo;t bother with vendor prefixes / browser compatibility.</p>
-
-<h4>Curves</h4>
-
-<p>A cubic bezier curve in CSS looks like a bunch of random numbers.</p>
-
-<pre><code class="css">.class {    
- transition: all 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-}
-</code></pre>
-
-<p>What do those values mean? First lets understand the structure and a cubic bezier curve.</p>
-
-<p><img src="http://callmenick.com/files/2016-04/bezier.png" alt="" /></p>
-
-<p>A curve is defined by four points
-    
-    ...<br/><a href="/blog/2016/08/07/cubic-beziers/"><h6>Read more...</h6></a>
-    <!-- content | excerpt }} -->
+  <footer class="post-footer">
+  <section class="author">
+    <h4>Skylar Brown</h4>
+    <p></p>
   </section>
-
-
-    </article>
-
-  
-    <article class="post">
-      
-  
-  <header class="post-header">
-    <span class="post-meta">13 Jul 2016</span>
-    <h2 class="post-title">
-      
-      <a href="/blog/2016/07/13/foreach-for-nodelists/">
-      
-        forEach for NodeLists</a>
-    </h2>
-  </header>
-  <section class="post-excerpt">
-    
-        <h5>The Problem</h5>
-
-<p>So jQuery is great&hellip; Want to loop over all <code>my-class</code> elements?</p>
-
-<pre><code class="js">$('.my-class').each(function(){
-    // do stuff with $(this)
-});
-</code></pre>
-
-<p>Now as great as it is, you might not want to use jQuery on your site. There are <a href="http://blog.garstasio.com/you-dont-need-jquery/">many</a> <a href="http://youmightnotneedjquery.com/">reasons</a> <a href="http://stackoverflow.com/questions/5099949/what-are-some-empirical-technical-reasons-not-to-use-jquery">why</a>.
-No problem, lets just use vanilla javascript.</p>
-
-<pre><code class="js">document.getElementsByClassName('my-class').forEach(function(){
-  // do stuff ... ?
-});
-</code></pre>
-
-<p>But whats this?</p>
-
-<p><code>Uncaught TypeError: document.getElementsByClassName(...).forEach is not a function(…)</code></p>
-
-<p>
-    
-    ...<br/><a href="/blog/2016/07/13/foreach-for-nodelists/"><h6>Read more...</h6></a>
-    <!-- content | excerpt }} -->
+  <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=Animated markers on an SVG map&amp;url=http://skylar.xyz/blog/2017/05/28/map-markers/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://skylar.xyz/blog/2017/05/28/map-markers/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://skylar.xyz/blog/2017/05/28/map-markers/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+    </a>
   </section>
-
-
-    </article>
+</footer>
+  <hr>
+  
+    <div class="share">
+</div>
 
   
-    <article class="post">
-      
   
-  <header class="post-header">
-    <span class="post-meta">04 Jun 2016</span>
-    <h2 class="post-title">
-      
-      <a href="/blog/2016/06/04/a-rainbow-thing/">
-      
-        A Rainbow Thing</a>
-    </h2>
-  </header>
-  <section class="post-excerpt">
-    
-        <p>I came across this gif on reddit today.
-<br>
-<br>
-<img src="https://s-media-cache-ak0.pinimg.com/originals/50/b4/97/50b497753dc91b55c5410f531935d7c3.gif">
-<br>
-<br></p>
-
-<p>No idea how it was made but thought it would be an interesting challenge to replicate it with css keyframe animation. I explicitly set out to do this with no javascript just to explore the limitations of keyframe animation, and yes, I am well aware that the problems listed below can all be solved with JS. Thats not the point.</p>
-
-<p>Here are some interesting limitations of keyframe animation that I came across while doing this.</p>
-
-<h6>Problem 1: Iteration Delays</h6>
-
-<p>As helpful as the <code>animation-delay</code> property can be, it only delays the start of the animation relative to page load (or to when the animation was applied to the element). There is no delay-per-iteration type property. I would love to be able to specify an animation something like this&hellip;</p>
-
-
-    
-    ...<br/><a href="/blog/2016/06/04/a-rainbow-thing/"><h6>Read more...</h6></a>
-    <!-- content | excerpt }} -->
-  </section>
-
-
-    </article>
-
-
-<nav class="pagination" role="pagination">
-  
-
-  <span class="page-number">
-    Page 1 of 1
-  </span>
-
-  
-</nav>
-
-
-  </main>
+</article></main>
   <footer class="site-footer"><a class="subscribe icon-feed" href="http://skylar.xyz/atom.xml"><span class="tooltip">Subscribe!</span></a>
 
 

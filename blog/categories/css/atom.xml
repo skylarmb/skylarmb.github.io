@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: css | A Front End Blog]]></title>
+  <link href="http://skylar.xyz/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://skylar.xyz/"/>
+  <updated>2017-05-28T18:26:01-07:00</updated>
+  <id>http://skylar.xyz/</id>
+  <author>
+    <name><![CDATA[Skylar Brown]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Animated markers on an SVG map]]></title>
+    <link href="http://skylar.xyz/blog/2017/05/28/map-markers/"/>
+    <updated>2017-05-28T17:07:03-07:00</updated>
+    <id>http://skylar.xyz/blog/2017/05/28/map-markers</id>
+    <content type="html"><![CDATA[<p>I recently started my new job at <a href="https://headnote.com">Headnote</a>. My first project was to redo all of the public facing pages to update the branding and advertising language. The one piece of code I would like to share from the experience is the animated markers that pop up in various places on a map. Now, I am new to Less (purely a Sass guy before this gig), so this was a great learning experience for me about what advanced features Less supports compared to Sass. There were definitely some challenges. The main one being that Less is much less flexible (no pun intended) in terms of interpolation and apparently is very very picky about using variables / interpolation on the <em>left</em> side of a definition (I dont know what else to call it)&hellip; For example:</p>
+
+<pre><code class="scss">
+@side: left;
+
+.my-class {
+  margin-@{side}: 5px;
+}
+</code></pre>
+
+<p>This particular example works&hellip; however when I tried to use this sort of interpolation for keyframe animation, Less complained endlessly. Admittedly this is a bit of an edge case. I tried every possible combination of escaping, string concatenation, interpolation, etc and could get neither the <code>%</code> sign needed for defining keyframes nor inline math to work. In my experience, <a href="https://gist.github.com/skylarmb/258236d9887041b2e78e26c02e963a11">Sass is a bit more forgiving in this regard</a>, although I havent tried re-creating this exact code in Sass.</p>
+
+<pre><code class="scss">
+.map-keyframe-set(@base-percent, @offset) {
+  @{base-percent}% { // syntax error!
+    opacity: 0;
+  }
+  (@{base-percent})% { // syntax error!
+    opacity: 0;
+  }
+  @{base-percent}\% { // escaping doesnt work!
+    opacity: 0;
+  }
+  @{base-percent}~"%" { // this escaping doesnt work either!
+    opacity: 0;
+  }
+  "@{base-percent}%" { // Nope!
+    opacity: 0;
+  }
+  @{base-percent} + @{offset} { // math doesnt work!
+    opacity: 0;
+  }
+  (@{base-percent} + @{offset}) { // math doesnt work!
+    opacity: 0;
+  }
+  //...
+}
+</code></pre>
+
+<p>Believe me, these are not all the syntaxes I tried. I spent almost an hour being stubborn about this&hellip; I ended up going with a simple but extremely un-satisfying solution. Pass values in as percentages and do the percentage math first, then use the resulting value in the definition.</p>
+
+<pre><code class="scss">
+
+.map-keyframe-set(@base-percent, @offset) {
+  @start: (@base-percent + @offset);
+
+  @{start} { // OK!
+    opacity: 0;
+  }
+  //...
+}
+</code></pre>
+
+<p>Anyways, here is the result! PLEASE open this in a new tab, you cannot see the whole map in this tiny iframe</p>
+
+<p data-height="580" data-theme-id="0" data-slug-hash="KmLeXd" data-default-tab="css,result" data-user="skylarmb" data-embed-version="2" data-pen-title="KmLeXd" class="codepen">See the Pen <a href="https://codepen.io/skylarmb/pen/KmLeXd/">KmLeXd</a> by Skylar Brown (<a href="https://codepen.io/skylarmb">@skylarmb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>
