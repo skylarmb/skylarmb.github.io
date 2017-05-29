@@ -18,7 +18,7 @@ I recently started my new job at [Headnote](https://headnote.com). My first proj
 
 ```
 
-This particular example works... however when I tried to use this sort of interpolation for keyframe animation, Less complained endlessly. Admittedly this is a bit of an edge case. I tried every possible combination of escaping, string concatenation, interpolation, etc and could get neither the `%` sign needed for defining keyframes nor inline math to work. In my experience, [Sass is a bit more forgiving in this regard](https://gist.github.com/skylarmb/258236d9887041b2e78e26c02e963a11), although I havent tried re-creating this exact code in Sass.
+This particular example works... however when I tried to use this sort of interpolation for keyframe animation<!--more-->, Less complained endlessly. Admittedly this is a bit of an edge case. I tried every possible combination of escaping, string concatenation, interpolation, etc and could get neither the `%` sign needed for defining keyframes nor inline math to work. In my experience, [Sass is a bit more forgiving in this regard](https://gist.github.com/skylarmb/258236d9887041b2e78e26c02e963a11), although I havent tried re-creating this exact code in Sass.
 
 ```scss
 
