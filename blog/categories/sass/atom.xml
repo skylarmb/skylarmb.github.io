@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sass | A Front End Blog]]></title>
   <link href="http://skylar.xyz/blog/categories/sass/atom.xml" rel="self"/>
   <link href="http://skylar.xyz/"/>
-  <updated>2017-05-28T18:26:01-07:00</updated>
+  <updated>2017-05-28T18:31:41-07:00</updated>
   <id>http://skylar.xyz/</id>
   <author>
     <name><![CDATA[Skylar Brown]]></name>
@@ -28,7 +28,7 @@
 }
 </code></pre>
 
-<p>This particular example works&hellip; however when I tried to use this sort of interpolation for keyframe animation, Less complained endlessly. Admittedly this is a bit of an edge case. I tried every possible combination of escaping, string concatenation, interpolation, etc and could get neither the <code>%</code> sign needed for defining keyframes nor inline math to work. In my experience, <a href="https://gist.github.com/skylarmb/258236d9887041b2e78e26c02e963a11">Sass is a bit more forgiving in this regard</a>, although I havent tried re-creating this exact code in Sass.</p>
+<p>This particular example works&hellip; however when I tried to use this sort of interpolation for keyframe animation<!--more-->, Less complained endlessly. Admittedly this is a bit of an edge case. I tried every possible combination of escaping, string concatenation, interpolation, etc and could get neither the <code>%</code> sign needed for defining keyframes nor inline math to work. In my experience, <a href="https://gist.github.com/skylarmb/258236d9887041b2e78e26c02e963a11">Sass is a bit more forgiving in this regard</a>, although I havent tried re-creating this exact code in Sass.</p>
 
 <pre><code class="scss">
 .map-keyframe-set(@base-percent, @offset) {
