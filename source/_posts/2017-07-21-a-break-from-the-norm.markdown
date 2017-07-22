@@ -10,7 +10,7 @@ I usually post about code, but today I want to post about tooling and process. T
 
 ##### 1. Make notes for yourself
 
-Every day before I leave I spend 30 seconds writing myself a couple notes about where I left off and what I have on my mind. I use [Google Keep](https://www.google.com/keep/) to take notes, but to each their own. These notes are wonderful the next morning as I can pick up right where I left off, and even refer to them throughout the day to remember the small things that might otherwise slip through the cracks.
+Every day before I leave I spend 30 seconds writing myself a couple notes about where I left off and what I have on my mind. I use <a href="https://www.google.com/keep/" target="_blank">Google Keep</a> to take notes, but to each their own. These notes are wonderful the next morning as I can pick up right where I left off, and even refer to them throughout the day to remember the small things that might otherwise slip through the cracks.
 
 ##### 2. Create shortcuts
 
@@ -18,8 +18,8 @@ Allow yourself to do things faster. I create endless shortcuts. Here are just a 
 
  - I have browser bookmarks for all the services and sites I need to use daily, with shortened names so that more fit on the bookmark bar.
  - I use LastPass to manage passwords. I log in once in the morning and never have to worry about remembering credentials for the rest of the day.
- - I have TONS of aliases. Check out my [`.zshrc`](https://github.com/skylarmb/dotfiles/blob/master/.zshrc), my [`.gitconfig`](https://github.com/skylarmb/dotfiles/blob/master/.gitconfig), or my [`.vimrc`](https://github.com/skylarmb/dotfiles/blob/master/.vimrc)
- - I use BetterTouchTool to set up keyboard shortcuts for moving windows to different monitors, minimizing, maximizing, snapping, etc. You can find my config [here](https://github.com/skylarmb/dotfiles/blob/master/btt.json).
+ - I have TONS of aliases. Check out my <a href="https://github.com/skylarmb/dotfiles/blob/master/.zshrc" target="_blank"><code>.zshrc</code></a>, my <a href="https://github.com/skylarmb/dotfiles/blob/master/.gitconfig" target="_blank"><code>.gitconfig</code></a>, or my <a href="https://github.com/skylarmb/dotfiles/blob/master/.vimrc" target="_blank"><code>.vimrc</code></a>.
+ - I use BetterTouchTool to set up keyboard shortcuts for moving windows to different monitors, minimizing, maximizing, snapping, etc. You can find my config <a href="https://github.com/skylarmb/dotfiles/blob/master/btt.json" target="_blank">here</a>.
  - I have trackpad gestures to close tabs, switch tabs, switch windows, switch desktops, etc (included in above BTT config).
 
 ##### 3. Be proactive
