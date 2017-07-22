@@ -32,4 +32,5 @@ Inevitably we will all have to context switch. Things come up, prod deploys expl
 
 ##### 5. Speak up
 
-At the end of the day, the reason you have a manager or someone you report to is to make sure you are getting the resources you need to do your job, and that the company is getting the most they can out of you as an employee. If there is a process, formality, or meeting you thing is wasteful of your time or others' time, bring it up with someone. I'll bet you a nickel you won't meet much resistance if you make helpful suggestions about how to improve processes on your team (don't just complain with no suggestions for improvements).
+At the end of the day, the reason you have a manager or someone you report to is to make sure you are getting the resources you need to do your job, and that the company is getting the most they can out of you as an employee. If there is a process, formality, or meeting you think is wasting your time or others' time, bring it up with someone. I'll bet you a nickel you won't meet much resistance if you make helpful suggestions about how to improve processes on your team (don't just complain with no suggestions for improvements).
+
