@@ -4,7 +4,7 @@
   <title><![CDATA[A Front End Blog]]></title>
   <link href="http://skylar.xyz/atom.xml" rel="self"/>
   <link href="http://skylar.xyz/"/>
-  <updated>2017-07-21T22:30:54-07:00</updated>
+  <updated>2018-01-27T16:45:57-08:00</updated>
   <id>http://skylar.xyz/</id>
   <author>
     <name><![CDATA[Skylar Brown]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Simple Input Toggle]]></title>
+    <link href="http://skylar.xyz/blog/2018/01/27/a-simple-input-toggle/"/>
+    <updated>2018-01-27T16:39:16-08:00</updated>
+    <id>http://skylar.xyz/blog/2018/01/27/a-simple-input-toggle</id>
+    <content type="html"><![CDATA[<p>A simple, animated, and functional all-CSS toggle switch I made for Headnote. It is based on a checkbox input and there is no Javascript required, so you can easily put it right into any existing application where you use checkboxes.</p>
+
+<p><br></p>
+
+<p data-height="265" data-theme-id="0" data-slug-hash="POJpPR" data-default-tab="css,result" data-user="skylarmb" data-embed-version="2" data-pen-title="CSS Toggle" class="codepen">See the Pen <a href="https://codepen.io/skylarmb/pen/POJpPR/">CSS Toggle</a> by Skylar Brown (<a href="https://codepen.io/skylarmb">@skylarmb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Loading Spinners]]></title>
+    <link href="http://skylar.xyz/blog/2018/01/27/loading-spinners/"/>
+    <updated>2018-01-27T16:28:12-08:00</updated>
+    <id>http://skylar.xyz/blog/2018/01/27/loading-spinners</id>
+    <content type="html"><![CDATA[<p>Inspired by <a href="https://reddit.com/r/LoadingIcon">/r/LoadingIcon</a>, I made these two CSS loading icons.</p>
+
+<p><br></p>
+
+<p data-height="365" data-theme-id="0" data-slug-hash="ZvLoPG" data-default-tab="css,result" data-user="skylarmb" data-embed-version="2" data-pen-title="squares3" class="codepen">See the Pen <a href="https://codepen.io/skylarmb/pen/ZvLoPG/">squares3</a> by Skylar Brown (<a href="https://codepen.io/skylarmb">@skylarmb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+
+<p data-height="365" data-theme-id="0" data-slug-hash="zpNjLr" data-default-tab="css,result" data-user="skylarmb" data-embed-version="2" data-pen-title="squares2" class="codepen">See the Pen <a href="https://codepen.io/skylarmb/pen/zpNjLr/">squares2</a> by Skylar Brown (<a href="https://codepen.io/skylarmb">@skylarmb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A break from the norm]]></title>
