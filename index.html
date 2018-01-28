@@ -245,51 +245,6 @@
       
   
   <header class="post-header">
-    <span class="post-meta">13 Jul 2016</span>
-    <h2 class="post-title">
-      
-      <a href="/blog/2016/07/13/foreach-for-nodelists/">
-      
-        forEach for NodeLists</a>
-    </h2>
-  </header>
-  <section class="post-excerpt">
-    
-        <h5>The Problem</h5>
-
-<p>So jQuery is great&hellip; Want to loop over all <code>my-class</code> elements?</p>
-
-<pre><code class="js">$('.my-class').each(function(){
-    // do stuff with $(this)
-});
-</code></pre>
-
-<p>Now as great as it is, you might not want to use jQuery on your site. There are <a href="http://blog.garstasio.com/you-dont-need-jquery/">many</a> <a href="http://youmightnotneedjquery.com/">reasons</a> <a href="http://stackoverflow.com/questions/5099949/what-are-some-empirical-technical-reasons-not-to-use-jquery">why</a>.
-No problem, lets just use vanilla javascript.</p>
-
-<pre><code class="js">document.getElementsByClassName('my-class').forEach(function(){
-  // do stuff ... ?
-});
-</code></pre>
-
-<p>But whats this?</p>
-
-<p><code>Uncaught TypeError: document.getElementsByClassName(...).forEach is not a function(…)</code></p>
-
-<p>
-    
-    ...<br/><a href="/blog/2016/07/13/foreach-for-nodelists/"><h6>Read more...</h6></a>
-    <!-- content | excerpt }} -->
-  </section>
-
-
-    </article>
-
-  
-    <article class="post">
-      
-  
-  <header class="post-header">
     <span class="post-meta">04 Jun 2016</span>
     <h2 class="post-title">
       
