@@ -22,7 +22,7 @@ A cubic bezier curve in CSS looks like a bunch of random numbers.
 
 What do those values mean? First lets understand the structure and a cubic bezier curve. 
 
-![](http://callmenick.com/files/2016-04/bezier.png) 
+![](/images/bezier.png) 
 
 A curve is defined by four points<!--more-->. In the above diagram, P<sub>0</sub> through P<sub>3</sub>. However, P<sub>0</sub> and P<sub>3</sub> always have the coordinates `(0,0)` and `(1,1)` respectively, so we only need to define the coordinates of P<sub>1</sub> and P<sub>2</sub>. The four values define the X and Y coordinates of those two points, like so:
 
