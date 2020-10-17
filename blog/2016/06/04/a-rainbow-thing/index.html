@@ -2,6 +2,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<script>
+      if (
+        window.location.protocol === "http:" &&
+        !window.location.href.includes("localhost")
+      ) {
+        var restOfUrl = window.location.href.substr(5);
+        window.location = "https:" + restOfUrl;
+      }
+    </script>
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta charset="utf-8">
@@ -127,7 +136,7 @@ Follow me on
 
 
 
-<section class="copyright">All content copyright <a href="/">Skylar Brown</a> © 2018 • All rights reserved.</section>
+<section class="copyright">All content copyright <a href="/">Skylar Brown</a> © 2020 • All rights reserved.</section>
 
 <section class="poweredby">Casper theme by <a class="icon-ghost" href="http://tryghost.org">Ghost</a> &amp; Published with <a href="http://octopress.org">Octopress</a></section>
 

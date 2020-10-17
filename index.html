@@ -2,6 +2,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<script>
+      if (
+        window.location.protocol === "http:" &&
+        !window.location.href.includes("localhost")
+      ) {
+        var restOfUrl = window.location.href.substr(5);
+        window.location = "https:" + restOfUrl;
+      }
+    </script>
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta charset="utf-8">
@@ -9,7 +18,7 @@
 
 	<meta name="author" content="Skylar Brown">
 	
-	<meta name="description" content="27 Jan 2018 A Simple Input Toggle A simple, animated, and functional all-CSS toggle switch I made for Headnote. It is based on a checkbox input and &hellip;">
+	<meta name="description" content="16 Oct 2020 Fixed Attachment CSS Gradients Yeah it&rsquo;s been a while since I last posted. I need to start posting more small things instead of &hellip;">
 
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="MobileOptimized" content="320" />
@@ -44,6 +53,59 @@
       
   
     
+  
+  <header class="post-header">
+    <span class="post-meta">16 Oct 2020</span>
+    <h2 class="post-title">
+      
+      <a href="/blog/2020/10/16/fixed-attachment-css-gradients/">
+      
+        Fixed Attachment CSS Gradients</a>
+    </h2>
+  </header>
+  <section class="post-excerpt">
+    
+        <p>Yeah it&rsquo;s been a while since I last posted. I need to start posting more small things instead of convincing myself that only really big cool things are blog worthy. So, here&rsquo;s something small.</p>
+
+<p>I was recently admiring the gradient backgrounds on messages in Facebook messenger. Specifically, I liked how the gradient colors stayed relative to your viewport even as you scrolled. I thought it would be fun to attempt to replicate this in CSS.</p>
+
+<p>The way I implemented this was simply to use the desired gradient as a <code>background-image</code> on the element, which allows us to use the powerful css properties that are available for background images. There are quite a few interesting ones that can be used for cool things, like <code>background-position</code> and <code>background-clip</code>, which I may explore some other time. The only property we need to use in this case is <code>background-attachment: fixed;</code> on the message elements. This works much like <code>fixed</code> in other contexts in CSS.</p>
+
+<p>From MDN on <code>background-attachment</code>:</p>
+
+<blockquote><p><code>fixed</code>: The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn&rsquo;t move with the element.</p></blockquote>
+
+<p>Try scrolling on the messages to see the effect in action. Also try switching the color scheme for some more dramatic gradients.</p>
+
+<p class="codepen" data-height="700" data-theme-id="dark" data-default-tab="css,result" data-user="skylarmb" data-slug-hash="WNxwzoR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Messenger background gradients">
+  <span>See the Pen <a href="https://codepen.io/skylarmb/pen/WNxwzoR">
+  Messenger background gradients</a> by Skylar Brown (<a href="https://codepen.io/skylarmb">@skylarmb</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
+
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<p>Shoutout to some cool and fun tools I used:</p>
+
+<p>Emojify: <a href="https://matthewmiller.dev/experiments/emojify/">https://matthewmiller.dev/experiments/emojify/</a></p>
+
+<p>Corporate Ipsum: <a href="https://www.cipsum.com">https://www.cipsum.com</a></p>
+
+<p>uiGradients: <a href="https://uigradients.com/">https://uigradients.com/</a></p>
+
+    
+    ...<br/><a href="/blog/2020/10/16/fixed-attachment-css-gradients/"><h6>Read more...</h6></a>
+    <!-- content | excerpt }} -->
+  </section>
+
+
+    </article>
+
+  
+    <article class="post">
+      
   
   <header class="post-header">
     <span class="post-meta">27 Jan 2018</span>
@@ -309,7 +371,7 @@ Follow me on
 
 
 
-<section class="copyright">All content copyright <a href="/">Skylar Brown</a> © 2018 • All rights reserved.</section>
+<section class="copyright">All content copyright <a href="/">Skylar Brown</a> © 2020 • All rights reserved.</section>
 
 <section class="poweredby">Casper theme by <a class="icon-ghost" href="http://tryghost.org">Ghost</a> &amp; Published with <a href="http://octopress.org">Octopress</a></section>
 
