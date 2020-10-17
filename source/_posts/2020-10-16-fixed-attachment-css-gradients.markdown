@@ -16,9 +16,19 @@ From MDN on `background-attachment`:
 
 > `fixed`: The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element.
 
+Try scrolling on the messages to see the effect in action
+
 <p class="codepen" data-height="700" data-theme-id="dark" data-default-tab="css,result" data-user="skylarmb" data-slug-hash="WNxwzoR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Messenger background gradients">
   <span>See the Pen <a href="https://codepen.io/skylarmb/pen/WNxwzoR">
   Messenger background gradients</a> by Skylar Brown (<a href="https://codepen.io/skylarmb">@skylarmb</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+Shoutout to some cool and fun tools I used:
+
+Emojify: https://matthewmiller.dev/experiments/emojify/
+
+Corporate Ipsum: https://www.cipsum.com
+
+uiGradients: https://uigradients.com/
