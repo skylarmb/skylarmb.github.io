@@ -27,7 +27,7 @@ Try scrolling on the messages to see the effect in action. Also try switching th
 
 Shoutout to some cool and fun tools I used:
 
-Emojify: https://matthewmiller.dev/experiments/emojify/
+Emojify: https://madelinemiller.dev/apps/emojify/
 
 Corporate Ipsum: https://www.cipsum.com
 
